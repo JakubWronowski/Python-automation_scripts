@@ -52,7 +52,7 @@ if task_1 == "right":
     task_2 = input("\nArgghh, Blimey!You've done it...Now another challenge.\n\
 Cross this ravine either by bridge, rope or ladder. Which path will you take?:\n ").lower()
     if task_2 == "rope" or task_2 == "ladder":
-        print("Next you will face one of 3 scariest and deadliest pirates on this island")
+        print("Next you will face one of 4 scariest and deadliest pirates on this island")
         random_opponent = random.choice(list_of_opponents)
         print(random_opponent)
         if random_opponent == list_of_opponents[1] or random_opponent == list_of_opponents[3]:
