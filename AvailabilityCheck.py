@@ -25,12 +25,12 @@ def notification_email():
 websiteurl = "" ### Place for website URL
 
 #finding out if webpage is available by checking its status_code 
-is_available = requests.get(websiteurl, timeout=8)
-if is_available.status_code != 200:
+available = requests.get(websiteurl, timeout=8)
+if available.status_code != 200:
     notification_email()
 
 #finding out if webpage is available by checking if specific content is displayed
-inspect = bs4.BeautifulSoup(is_available.text, "html.parser")
+inspect = bs4.BeautifulSoup(available.text, "html.parser")
 
 #copy and paste selector of content 
 content = inspect.select("") 
