@@ -14,7 +14,7 @@ p_word = os.environ.get("P_WORD")
 def notification_email():
     notification = smtplib.SMTP("smtp.gmail.com", 587)
     notification.starttls()
-    notification.login(e_addr, pword)
+    notification.login(e_addr, p_word)
     type_of_info = "Website is down. Actions required!"
     email_message = (f"Type: {type_of_info}")
     notification.sendmail("Sender e-mail", "Reciever e-mail", email_message) ### Replace Sender email and Reciever email with e-mail ids
