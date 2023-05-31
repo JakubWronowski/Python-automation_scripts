@@ -17,7 +17,7 @@ def notification_email():
     notification.login(e_addr, pword)
     type_of_info = "Website is down. Actions required!"
     email_message = (f"Type: {type_of_info}")
-    notification.sendmail("Sender e-mail", "Reciever e-mail", email_message)
+    notification.sendmail("Sender e-mail", "Reciever e-mail", email_message) ### Replace Sender email and Reciever email with e-mail ids
     notification.quit()
 
 
