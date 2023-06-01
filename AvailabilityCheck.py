@@ -22,7 +22,7 @@ def notification_email():
 
 
 
-websiteurl = "" ### Place for website URL
+websiteurl = "http://example.com" ### Place for website URL
 
 #Finding out if webpage is available by checking its status_code 
 available = requests.get(websiteurl, timeout=8)
@@ -33,11 +33,11 @@ if available.status_code != 200:
 inspect = bs4.BeautifulSoup(available.text, "html.parser")
 
 #copy/paste selector of specific content 
-content = inspect.select("") 
+content = inspect.select("example selector") 
 
 #if statment for veryfing if content is on webpage
 try:
-    if content[0].text != "":   ###Place for specific fragment of content referring to a selector
+    if content[0].text != "example content":   ###Place for specific fragment of content referring to a selector
         notification_email()
 except Exception as e:
     notification_email()
