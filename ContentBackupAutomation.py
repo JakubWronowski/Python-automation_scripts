@@ -13,7 +13,7 @@ def backup_data(src_folder, dst_folder):
         os.makedirs(dst_folder)
 
     
-    backup_name = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))
+    backup_tame = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))
 
     
     zip_file_name = f"{os.path.join(dst_folder, os.path.basename(src_folder))}_{backup_name}.zip"
