@@ -29,7 +29,7 @@ def backup_data(src_folder, dst_folder):
 
     #upload file to s3
     try:
-        s3.upload_file(zip_file_name, bucket_name, os.path.basename(zip_file_name))
+        s3.upload_file(zip_file_name, s3_bucket_name, os.path.basename(zip_file_name))
         print(f"Backup successfully uploaded to {s3_bucket_name}")
     except Exception as e:
         print(f"Failed to upload backup to AWS S3: {e}")'''
