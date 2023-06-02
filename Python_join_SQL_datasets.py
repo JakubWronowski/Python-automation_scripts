@@ -12,7 +12,7 @@ def merge_postgresql_datasets(table_names):
     }
 
     conn = psycopg2.connect(**connection_params)
-    cursor = conn.cursor()
+
 
     datasets = []
     for table_name in table_names:
