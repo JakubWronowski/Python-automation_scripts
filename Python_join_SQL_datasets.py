@@ -16,7 +16,8 @@ def merge_postgresql_datasets(table_names):
 
     datasets = []
     for table_name in table_names:
-        query = f"SELECT * FROM {table_name}"
+        #For e.g. this query selects and returns items from specific category which have avg price above 100  
+        query = f"SELECT category, AVG(price) FROM {table_name} GROUP BY category HAVING AVG(price) > 100;"
         dataset = pd.read_sql(query, conn)
         datasets.append(dataset)
 
