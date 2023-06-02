@@ -22,10 +22,10 @@ def notification_email():
 
 
 
-websiteurl = "http://example.com" ### Place for website URL
+website_url = "http://example.com" ### Place for website URL
 
 #Finding out if webpage is available by checking its status_code 
-available = requests.get(websiteurl, timeout=8)
+available = requests.get(website_url, timeout=8)
 if available.status_code != 200:
     notification_email()
 
