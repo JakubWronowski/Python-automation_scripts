@@ -15,8 +15,8 @@ def notification_email():
     notification = smtplib.SMTP("smtp.gmail.com", 587)
     notification.starttls()
     notification.login(e_addr, p_word)
-    type_of_info = "Website is down. Actions required!"
-    email_message = (f"Type: {type_of_info}")
+    info_type = "Website is down. Actions required!"
+    email_message = (f"TypeError: {info_type}")
     notification.sendmail("Sender e-mail", "Reciever e-mail", email_message) ### Replace Sender email and Reciever email with e-mail ids
     notification.quit()
 
